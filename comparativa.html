@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web actual vs. nueva web · Propuesta para La Iguana Café</title>
+  <meta name="description" content="Comparativa entre la web actual de La Iguana Café y la nueva propuesta: móvil, carta, Google, reservas y redes sociales.">
+  <meta name="theme-color" content="#1E4D3A">
+  <link rel="canonical" href="https://www.iguanacafe.es/comparativa.html">
+  <meta name="robots" content="noindex">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="La Iguana Café">
+  <meta property="og:title" content="Web actual vs. nueva web · Propuesta para La Iguana Café">
+  <meta property="og:description" content="Comparativa entre la web actual de La Iguana Café y la nueva propuesta: móvil, carta, Google, reservas y redes sociales.">
+  <meta property="og:image" content="assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Rock+Salt&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="comparativa">
+  <div id="site-header"></div>
+  <noscript><nav class="noscript-nav"><a href="index.html">Inicio</a><a href="la-iguana.html">Quiénes somos</a><a href="carta.html">Carta</a><a href="desayunos.html">Desayunos</a><a href="menu-diario.html">Menú diario</a><a href="menu-infantil.html">Menú infantil</a><a href="celebraciones.html">Celebraciones</a><a href="contacto.html">Dónde estamos</a><a href="tel:+34925620372">Llamar 925 62 03 72</a></nav></noscript>
+
+  <main id="contenido">
+    <section class="page-hero">
+      <div class="container">
+        <nav aria-label="Ruta de navegación"><ol class="breadcrumb"><li><a href="index.html">Inicio</a></li><li aria-current="page">Comparativa</li></ol></nav>
+        <h1>¿Por qué una web nueva?</h1>
+        <p>La misma Iguana de siempre, con una web preparada para el móvil, para Google y para traer más clientes.</p>
+      </div>
+      <img class="page-hero__deco page-hero__deco--izq" src="assets/img/marca/iguana-patines.png" alt="" loading="lazy">
+      <img class="page-hero__deco page-hero__deco--der" src="assets/img/marca/iguana-tumbada.png" alt="" loading="lazy">
+    </section>
+    <div class="damero" aria-hidden="true"></div>
+    <style>
+      .vs { width: 100%; border-collapse: separate; border-spacing: 0 10px; }
+      .vs th, .vs td { padding: 16px 18px; vertical-align: top; text-align: left; background: #fff; }
+      .vs thead th { background: none; font-size: .85rem; text-transform: uppercase; letter-spacing: .12em; color: var(--texto-suave); padding-bottom: 0; }
+      .vs tbody th { border-radius: 16px 0 0 16px; color: var(--verde-oscuro); width: 18%; }
+      .vs tbody td:last-child { border-radius: 0 16px 16px 0; background: #effaf2; }
+      .vs td.antes { color: #7a2e2e; }
+      .vs td.antes::before { content: "✗ "; font-weight: 800; color: #c0392b; }
+      .vs td.despues::before { content: "✓ "; font-weight: 800; color: #1a8f4c; }
+      @media (max-width: 760px) {
+        .vs thead { display: none; }
+        .vs, .vs tbody, .vs tr, .vs th, .vs td { display: block; width: 100%; }
+        .vs tr { margin-bottom: 14px; border-radius: 16px; overflow: hidden; box-shadow: var(--sombra); }
+        .vs tbody th, .vs tbody td:last-child { border-radius: 0; }
+        .vs tbody th { background: var(--verde-oscuro); color: #fff; }
+      }
+      .pasos { counter-reset: paso; list-style: none; padding: 0; display: grid; gap: 14px; }
+      .pasos li { counter-increment: paso; background: #fff; border-radius: 18px; padding: 18px 20px 18px 74px; position: relative; box-shadow: var(--sombra); }
+      .pasos li::before { content: counter(paso); position: absolute; left: 18px; top: 16px; width: 40px; height: 40px; border-radius: 50%; background: var(--fucsia); color: #fff; display: grid; place-items: center; font-weight: 800; }
+    </style>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid cards-3" style="margin-bottom:48px">
+          <div class="valor reveal"><div class="valor__icono">📱</div><h3>Todo pasa en el móvil</h3><p>La mayoría de clientes busca restaurante desde el teléfono, de camino o en el sofá.</p></div>
+          <div class="valor reveal reveal-delay-1"><div class="valor__icono">🔎</div><h3>Google decide</h3><p>«Hamburguesería cerca» o «menú del día Toledo»: hay que salir ahí con carta, horario y fotos.</p></div>
+          <div class="valor reveal reveal-delay-2"><div class="valor__icono">📞</div><h3>Un toque y llaman</h3><p>Botones de Llamar, WhatsApp y Cómo llegar siempre a mano.</p></div>
+        </div>
+
+        <div class="section-head reveal">
+          <span class="kicker">Punto por punto</span>
+          <h2 class="titulo">Web actual vs. nueva web</h2>
+        </div>
+        <table class="vs reveal">
+          <thead><tr><th scope="col">Aspecto</th><th scope="col">Web actual</th><th scope="col">Nueva web</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Móvil</th><td class="antes">Detecta móviles con un truco antiguo y carga otra hoja de estilos. Letra de 9 a 14 px, difícil de leer.</td><td class="despues">Diseño adaptable de 320 a 1440 px, texto de 16 px como mínimo y botones grandes de Llamar y WhatsApp.</td></tr>
+            <tr><th scope="row">Carta</th><td class="antes">Es una foto JPG: Google no la puede leer, no se puede buscar y pesa mucho en el móvil.</td><td class="despues">Carta en texto con precios, buscador, filtros (vegano, sin gluten, picante) e impresión limpia. Se actualiza en un único archivo.</td></tr>
+            <tr><th scope="row">Google y SEO local</th><td class="antes">Sin datos estructurados, títulos genéricos («La Iguana Toledo - Platos») y el enlace «Carta» del menú lleva al menú diario.</td><td class="despues">Ficha de restaurante para Google (dirección, horario, cocina, precios), carta legible para Google y título y descripción únicos en cada página.</td></tr>
+            <tr><th scope="row">Horario</th><td class="antes">Datos contradictorios (cierre a las 22:45 en Contacto y a las 23:00 en Inicio).</td><td class="despues">Un único horario para toda la web e indicador en directo de «Abierto ahora / Cerrado · abre a las…».</td></tr>
+            <tr><th scope="row">Vista 360º</th><td class="antes">Hecha en Flash, que ya no funciona en ningún navegador desde 2021.</td><td class="despues">Galería «Haz un viaje por La Iguana» con visor de fotos y hueco preparado para un tour 360º moderno.</td></tr>
+            <tr><th scope="row">Reservas y cumpleaños</th><td class="antes">No hay formularios y el icono de email no lleva a ningún sitio.</td><td class="despues">Formularios de reserva, pedido para recoger y cumpleaños, con envío por WhatsApp en un toque.</td></tr>
+            <tr><th scope="row">Redes sociales</th><td class="antes">Solo Facebook y Twitter, con iconos pequeños.</td><td class="despues">Instagram, Facebook, X, WhatsApp y reseñas de Google en la cabecera, el pie y la página de contacto.</td></tr>
+            <tr><th scope="row">Estadísticas</th><td class="antes">Usa Google Analytics «Universal», que dejó de registrar visitas en 2023: ahora mismo no se mide nada.</td><td class="despues">Preparada para conectar Google Analytics 4 respetando el consentimiento de cookies.</td></tr>
+            <tr><th scope="row">Seguridad y tecnología</th><td class="antes">jQuery de 2012 y un gestor de contenidos antiguo. La versión http no redirige a https.</td><td class="despues">HTML, CSS y JavaScript modernos, sin dependencias. Alojamiento gratuito con https (Netlify, Cloudflare Pages o GitHub Pages).</td></tr>
+            <tr><th scope="row">Accesibilidad</th><td class="antes">Textos dentro de imágenes y descripciones genéricas («Iguana»).</td><td class="despues">Pensada para cumplir WCAG AA: contraste, navegación con teclado, textos alternativos y animaciones que respetan «reducir movimiento».</td></tr>
+            <tr><th scope="row">Imagen de marca</th><td class="antes">Las iguanas y el neón están, pero perdidos entre bloques recargados.</td><td class="despues">Las mismas iguanas, el neón, el damero y los colores de siempre, con más protagonismo y aire.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section section--white">
+      <div class="container-narrow">
+        <div class="section-head reveal">
+          <span class="kicker">Hoja de ruta</span>
+          <h2 class="titulo titulo--rosa">Siguientes pasos</h2>
+        </div>
+        <ol class="pasos reveal">
+          <li><strong>Revisar contenidos:</strong> confirmar precios, horario de noche (22:45 o 23:00), precio del menú diario y número de WhatsApp.</li>
+          <li><strong>Fotos nuevas:</strong> una sesión de fotos del local y de los platos en alta resolución.</li>
+          <li><strong>Redes:</strong> confirmar o crear la cuenta de Instagram y enlazar las reseñas de Google.</li>
+          <li><strong>Publicar:</strong> subir la web a un alojamiento gratuito y apuntar el dominio iguanacafe.es.</li>
+          <li><strong>Google Business Profile:</strong> actualizar la ficha con el enlace a la carta, el horario y fotos.</li>
+          <li><strong>Mantenimiento:</strong> actualizar el menú diario cada semana cambiando un solo bloque de texto.</li>
+        </ol>
+        <p class="text-center" style="margin-top:32px"><a class="btn btn--lg btn--cartel" href="index.html">Ver la nueva web</a></p>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

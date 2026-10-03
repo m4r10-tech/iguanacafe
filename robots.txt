@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /comparativa.html
+
+Sitemap: https://www.iguanacafe.es/sitemap.xml
