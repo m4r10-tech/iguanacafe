@@ -13,15 +13,16 @@
   <meta property="og:site_name" content="La Iguana Café">
   <meta property="og:title" content="La Iguana Café · Diner americano en Toledo">
   <meta property="og:description" content="Hamburguesas naturales, pizzas artesanas y pasta fresca hecha aquí. ¡Te esperamos todos los días!">
-  <meta property="og:image" content="assets/img/og-image.jpg">
+  <meta property="og:image" content="https://www.iguanacafe.es/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="assets/img/favicon.png" type="image/png">
-  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="icon" href="/assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Rock+Salt&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="preload" as="image" href="assets/img/local/banner-3.jpg">
+  <link rel="stylesheet" href="/src/css/styles.css">
+  <link rel="stylesheet" href="/src/css/experiencia.css">
+  <link rel="preload" as="image" href="/assets/video/recorrido-poster.jpg">
   <!-- Datos estructurados para Google (ficha de restaurante) -->
   <script type="application/ld+json">
   {
@@ -58,90 +59,180 @@
   </script>
 </head>
 <body data-page="inicio">
+  <!-- Intro: el neón se enciende (solo la primera visita de la sesión) -->
+  <div class="arranque" id="intro" aria-hidden="true">
+    <img class="arranque__logo" src="/assets/img/marca/logo.png" alt="" width="340" height="174">
+    <p class="arranque__hint">Toledo · Diner americano desde los 50</p>
+  </div>
+
   <div id="site-header"></div>
   <noscript><nav class="noscript-nav"><a href="index.html">Inicio</a><a href="la-iguana.html">Quiénes somos</a><a href="carta.html">Carta</a><a href="desayunos.html">Desayunos</a><a href="menu-diario.html">Menú diario</a><a href="menu-infantil.html">Menú infantil</a><a href="celebraciones.html">Celebraciones</a><a href="contacto.html">Dónde estamos</a><a href="tel:+34925620372">Llamar 925 62 03 72</a></nav></noscript>
 
   <main id="contenido">
 
-    <!-- ============ HERO ============ -->
-    <section class="hero" aria-labelledby="hero-titulo">
-      <div class="container">
-        <div class="hero__texto">
-          <img class="hero__neon" src="assets/img/marca/neon-la-iguana.png" alt="Cartel de neón de La Iguana Café" width="388" height="301">
-          <h1 class="hero__titulo" id="hero-titulo"><span class="neon">Welcome to</span> <span>La Iguana</span></h1>
-          <p class="hero__sub">Restaurante familiar inspirado en los diners americanos de los años 50. <strong>Pasta fresca hecha aquí, pizzas artesanales y hamburguesas naturales.</strong></p>
-          <div class="btn-group">
-            <a class="btn btn--lg" href="carta.html">Ver carta</a>
-            <a class="btn btn--lg btn--crema" data-link="tel" href="tel:+34925620372" data-icon="phone">Llamar 925 62 03 72</a>
-            <a class="btn btn--lg btn--outline-claro" data-link="mapas" href="#" data-icon="mapa">Cómo llegar</a>
-          </div>
-        </div>
+    <!-- ============ HERO DE CINE: vídeo del local de fondo ============ -->
+    <section class="cine" id="cine" aria-labelledby="hero-titulo" style="background-image:url('/assets/video/recorrido-poster.jpg')">
+      <!-- Vídeo montado con fotos reales del local. REEMPLAZAR por un vídeo grabado en el restaurante cuando exista -->
+      <video class="cine__video" id="cine-video" autoplay muted loop playsinline preload="auto" poster="/assets/video/recorrido-poster.jpg" aria-hidden="true">
+        <source src="/assets/video/recorrido.webm" type="video/webm">
+        <source src="/assets/video/recorrido.mp4" type="video/mp4">
+      </video>
+      <div class="cine__velo"></div>
+      <div class="cine__grano"></div>
 
-        <div class="hero__visual">
-          <div class="tv">
-            <div class="carousel" data-carousel data-dots="#hero-dots" role="region" aria-roledescription="carrusel" aria-label="Fotos de La Iguana Café">
-              <!-- REEMPLAZAR por fotos reales nuevas en alta resolución cuando las haya -->
-              <figure class="carousel__slide is-active" style="margin:0"><img src="assets/img/local/banner-3.jpg" alt="Hamburguesa natural con lechuga y tomate de La Iguana Café" width="960" height="350"><figcaption class="carousel__caption">Hamburguesas naturales 🍔</figcaption></figure>
-              <figure class="carousel__slide" style="margin:0"><img src="assets/img/local/banner-8.jpg" alt="Niños disfrutando de una hamburguesa gigante en La Iguana Café" width="960" height="350" loading="lazy"><figcaption class="carousel__caption">Un sitio para toda la familia</figcaption></figure>
-              <figure class="carousel__slide" style="margin:0"><img src="assets/img/local/banner-4.jpg" alt="Hamburguesa con patatas fritas y ensalada" width="960" height="350" loading="lazy"><figcaption class="carousel__caption">Con patatas, ensalada o coleslaw</figcaption></figure>
-              <figure class="carousel__slide" style="margin:0"><img src="assets/img/local/banner-1.jpg" alt="Tortitas caseras con nata y chocolate" width="960" height="350" loading="lazy"><figcaption class="carousel__caption">Postres caseros</figcaption></figure>
-              <figure class="carousel__slide" style="margin:0"><img src="assets/img/local/banner-2.jpg" alt="Fajitas de pollo sobre pizarra" width="960" height="350" loading="lazy"><figcaption class="carousel__caption">Fajitas, nachos y mucho más</figcaption></figure>
-              <figure class="carousel__slide" style="margin:0"><img src="assets/img/local/banner-10.jpg" alt="Tarta Iguana de zanahoria" width="960" height="350" loading="lazy"><figcaption class="carousel__caption">Tarta Iguana de zanahoria</figcaption></figure>
-              <div class="carousel__controls">
-                <button class="carousel__btn" type="button" data-carousel-prev aria-label="Foto anterior" data-icon="izq"></button>
-                <button class="carousel__btn" type="button" data-carousel-pausa aria-label="Pausar carrusel"></button>
-                <button class="carousel__btn" type="button" data-carousel-next aria-label="Foto siguiente" data-icon="der"></button>
-              </div>
-            </div>
-          </div>
-          <div class="carousel__dots" id="hero-dots"></div>
+      <div class="cine__capa cine__capa--iguana" data-depth="1" aria-hidden="true"><img src="/assets/img/marca/iguana-patines.png" alt="" width="451" height="550"></div>
+
+      <div class="cine__contenido" id="cine-contenido">
+        <p class="cine__estado"><span class="estado" data-estado aria-live="polite">Comprobando horario…</span></p>
+        <span class="cine__kicker">Diner americano · Toledo</span>
+        <h1 class="cine__titulo" id="hero-titulo">
+          <span class="linea cine__pre">Welcome to</span>
+          <span class="linea cine__marca">La Iguana</span>
+        </h1>
+        <span class="cine__regla" aria-hidden="true"></span>
+        <p class="cine__sub">Un viaje a los diners de los años 50 a un minuto de Luz del Tajo. <strong>Pasta fresca hecha aquí, pizzas artesanas y hamburguesas naturales.</strong></p>
+        <div class="btn-group">
+          <a class="btn btn--lg" href="carta.html" data-cursor="Carta">Ver carta</a>
+          <a class="btn btn--lg btn--crema" data-link="tel" href="tel:+34925620372" data-icon="phone">925 62 03 72</a>
+          <a class="btn btn--lg btn--outline-claro" data-link="mapas" href="#" data-icon="mapa">Cómo llegar</a>
         </div>
       </div>
-      <img class="hero__iguana" src="assets/img/marca/iguana-patines.png" alt="" width="451" height="550">
+
+      <a class="cine__scroll" href="#entra"><i></i>Entra</a>
+      <button class="cine__pausa" type="button" id="cine-pausa" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg><span>Pausar vídeo</span>
+      </button>
     </section>
-    <div class="damero" aria-hidden="true"></div>
+
+    <!-- ============ CINTA DE NEÓN ============ -->
+    <div class="cinta-wrap">
+    <div class="cinta cinta--inclinada" aria-hidden="true">
+      <div class="cinta__pista">
+        <span>Hamburguesas naturales <b>★</b> Pizzas artesanas <b>★</b> Pasta fresca hecha aquí <b>★</b> Postres caseros <b>★</b> Desayunos <b>★</b> Menú diario <b>★</b> Cumpleaños <b>★</b></span>
+        <span>Hamburguesas naturales <b>★</b> Pizzas artesanas <b>★</b> Pasta fresca hecha aquí <b>★</b> Postres caseros <b>★</b> Desayunos <b>★</b> Menú diario <b>★</b> Cumpleaños <b>★</b></span>
+      </div>
+    </div>
+    </div>
+
+    <!-- ============ ENTRA EN LA IGUANA (scroll cinematográfico) ============ -->
+    <!-- Fotos reales del local tomadas de reseñas públicas: sustituir por fotos propias antes de publicar -->
+    <section class="entra" id="entra" aria-label="Entra en La Iguana: recorrido por el local">
+      <div class="entra__sticky">
+        <div class="entra__capa" data-paso="0">
+          <img src="/assets/img/interior/local-fachada.jpg" alt="Fachada de La Iguana Café con su toldo verde y terraza" width="920" height="600">
+          <div class="entra__leyenda"><h2>Aparca en la puerta</h2><p>Junto al nuevo hospital, con terraza y aparcamiento fácil.</p></div>
+        </div>
+        <div class="entra__capa" data-paso="1">
+          <img src="/assets/img/interior/local-entrada.jpg" alt="Entrada de La Iguana Café con el rótulo y las alas del logo" width="1200" height="1080">
+          <div class="entra__leyenda"><h2>Cruza la puerta</h2><p>Bajo las alas de la iguana empieza otra década.</p></div>
+        </div>
+        <div class="entra__capa" data-paso="2">
+          <img src="/assets/img/interior/local-reservados.jpg" alt="Reservados de piel verde y suelo de damero" width="870" height="900">
+          <div class="entra__leyenda"><h2>Elige tu reservado</h2><p>Sofás de piel verde, damero y luz de diner.</p></div>
+        </div>
+        <div class="entra__capa" data-paso="3">
+          <img src="/assets/img/interior/local-neon.jpg" alt="Rótulo de neón verde de La Iguana Café sobre los reservados" width="1200" height="1080">
+          <div class="entra__leyenda"><h2>Welcome to the 50s</h2><p>Ya estás dentro. ¿Qué te apetece hoy?</p></div>
+        </div>
+
+        <div class="entra__textos" aria-hidden="true">
+          <div class="entra__paso"><span class="num">01</span><h2>Aparca en la puerta</h2><p>Junto al nuevo hospital y a un minuto del C.C. Luz del Tajo. Terraza y aparcamiento fácil.</p></div>
+          <div class="entra__paso"><span class="num">02</span><h2>Cruza la puerta</h2><p>Bajo las alas de la iguana empieza otra década: neón, rock &amp; roll y olor a pizza recién hecha.</p></div>
+          <div class="entra__paso"><span class="num">03</span><h2>Elige tu reservado</h2><p>Sofás de piel verde, suelo de damero y mesas de acero. Como en las películas.</p></div>
+          <div class="entra__paso"><span class="num">04</span><h2>Welcome to the 50s</h2><p>Ya estás dentro. Hamburguesas naturales, pasta fresca hecha aquí y postres caseros te esperan.</p></div>
+        </div>
+        <div class="entra__barra" aria-hidden="true"><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i></div>
+      </div>
+    </section>
 
     <!-- ============ PRESENTACIÓN ============ -->
     <section class="section" aria-labelledby="t-intro">
       <div class="container intro">
         <div class="reveal">
           <span class="kicker">La Iguana Café · Toledo</span>
-          <h2 class="titulo" id="t-intro">Un diner de los 50 a un minuto de Luz del Tajo</h2>
+          <h2 class="titulo" id="t-intro" data-split>Comida artesana con alma de diner</h2>
           <p class="lead">Somos un restaurante familiar inspirado en los diners americanos de los años 50, nuestra comida es artesana y de la máxima calidad, elaboramos a diario la mejor pasta fresca, pizzas y deliciosas hamburguesas.</p>
           <p>Te esperamos todos los días de la semana. De lunes a viernes, menús diarios y desayunos para todos los estómagos y todos los públicos.</p>
           <div class="cifras">
-            <div class="cifra"><strong>100%</strong><span>pasta fresca hecha aquí</span></div>
-            <div class="cifra"><strong>1 min</strong><span>del C.C. Luz del Tajo</span></div>
-            <div class="cifra"><strong>7 días</strong><span>a la semana abiertos</span></div>
+            <div class="cifra" data-tilt3d><strong><span data-count="100">100</span>%</strong><span>pasta fresca hecha aquí</span></div>
+            <div class="cifra" data-tilt3d><strong><span data-count="4.4" data-decimals="1">4,4</span>★</strong><span>en Google, casi 2.000 opiniones</span></div>
+            <div class="cifra" data-tilt3d><strong><span data-count="7">7</span> días</strong><span>a la semana abiertos</span></div>
           </div>
           <div class="btn-group">
             <a class="btn btn--verde" href="la-iguana.html">Conócenos</a>
             <a class="btn btn--outline" href="menu-diario.html">Menú de hoy</a>
           </div>
         </div>
-        <div class="intro__img reveal reveal-delay-2">
-          <img src="assets/img/marca/iguana-camarera.jpg" alt="Ilustración de la iguana camarera de La Iguana Café sirviendo café" width="600" height="901" loading="lazy" style="max-height:560px;object-fit:cover;width:100%;object-position:top">
+        <div class="intro__img reveal reveal-delay-2" data-tilt3d style="border-radius:var(--radio-xl)">
+          <img src="/assets/img/marca/iguana-camarera.jpg" alt="Ilustración de la iguana camarera de La Iguana Café sirviendo café" width="600" height="901" loading="lazy" style="max-height:560px;object-fit:cover;width:100%;object-position:top">
           <div class="intro__sello" aria-hidden="true">Diner<br>años 50</div>
         </div>
       </div>
     </section>
 
-    <!-- ============ ACCESOS RÁPIDOS ============ -->
+    <!-- ============ PLANES (accesos rápidos) ============ -->
     <section class="section section--white" aria-labelledby="t-accesos">
       <div class="container">
-        <div class="section-head text-center reveal">
-          <span class="kicker">¿Qué te apetece?</span>
-          <h2 class="titulo titulo--rosa" id="t-accesos">Elige tu plan</h2>
+        <div class="section-head reveal planes-head">
+          <div>
+            <span class="kicker">¿Qué te apetece?</span>
+            <h2 class="titulo" id="t-accesos" data-split>Elige tu plan</h2>
+          </div>
+          <p class="lead">Desde el primer café de la mañana hasta la última hamburguesa de la noche.</p>
         </div>
-        <div class="grid accesos">
-          <a class="acceso reveal" href="carta.html"><img src="assets/img/marca/nube-carta.png" alt="" width="240" height="164" loading="lazy"><span>Carta</span><small>Hamburguesas, pizzas, pasta…</small></a>
-          <a class="acceso reveal reveal-delay-1" href="menu-diario.html"><img src="assets/img/marca/nube-menu-diario.png" alt="" width="240" height="164" loading="lazy"><span>Menú diario</span><small>Laborables 13:30–16:00</small></a>
-          <a class="acceso reveal reveal-delay-2" href="desayunos.html"><img src="assets/img/marca/nube-desayunos.png" alt="" width="246" height="168" loading="lazy"><span>Desayunos</span><small>L–V desde las 9:30</small></a>
-          <a class="acceso reveal" href="carta.html#hamburguesas"><img src="assets/img/marca/nube-platos.png" alt="" width="240" height="164" loading="lazy"><span>Nuestros platos</span><small>Los favoritos de la casa</small></a>
-          <a class="acceso reveal reveal-delay-1" href="menu-infantil.html"><img src="assets/img/marca/nube-infantil.png" alt="" width="246" height="168" loading="lazy"><span>Menú infantil</span><small>Para los peques</small></a>
-          <a class="acceso reveal reveal-delay-2" href="celebraciones.html"><span class="acceso__css" aria-hidden="true"><b>Cumples<br>y fiestas</b><i>🎈</i></span><span>Celebraciones</span><small>Meriendas a tu medida</small></a>
+        <div class="planes">
+          <a class="plan plan--grande reveal" href="carta.html" data-cursor="Ver carta">
+            <img src="/assets/img/platos/hamburguesas.jpg" alt="" width="670" height="420" loading="lazy">
+            <span class="plan__info"><small>Todos los días</small><strong>La carta</strong><em>Hamburguesas naturales, pizzas artesanas y pasta fresca hecha aquí.</em></span>
+            <span class="plan__flecha" aria-hidden="true">→</span>
+          </a>
+          <a class="plan reveal reveal-delay-1" href="menu-diario.html" data-cursor="Ver">
+            <img src="/assets/img/interior/local-ventanal.jpg" alt="" width="1200" height="540" loading="lazy">
+            <span class="plan__info"><small>Laborables · 13:30–16:00</small><strong>Menú diario</strong></span>
+            <span class="plan__flecha" aria-hidden="true">→</span>
+          </a>
+          <a class="plan reveal reveal-delay-2" href="desayunos.html" data-cursor="Ver">
+            <img src="/assets/img/platos/postre-tortitas.jpg" alt="" width="440" height="506" loading="lazy">
+            <span class="plan__info"><small>L–V · desde las 9:30</small><strong>Desayunos</strong></span>
+            <span class="plan__flecha" aria-hidden="true">→</span>
+          </a>
+          <a class="plan reveal" href="menu-infantil.html" data-cursor="Ver">
+            <img src="/assets/img/local/banner-8.jpg" alt="" width="960" height="350" loading="lazy">
+            <span class="plan__info"><small>Para los peques</small><strong>Menú infantil</strong></span>
+            <span class="plan__flecha" aria-hidden="true">→</span>
+          </a>
+          <a class="plan reveal reveal-delay-1" href="celebraciones.html" data-cursor="Ver">
+            <img src="/assets/img/local/banner-9.jpg" alt="" width="960" height="350" loading="lazy">
+            <span class="plan__info"><small>Meriendas a medida</small><strong>Cumpleaños</strong></span>
+            <span class="plan__flecha" aria-hidden="true">→</span>
+          </a>
+          <a class="plan reveal reveal-delay-2" href="contacto.html" data-cursor="Ver">
+            <img src="/assets/img/interior/local-fachada.jpg" alt="" width="920" height="600" loading="lazy">
+            <span class="plan__info"><small>Junto al nuevo hospital</small><strong>Dónde estamos</strong></span>
+            <span class="plan__flecha" aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
+    </section>
+
+    <!-- ============ CARRUSEL 3D DE PLATOS ============ -->
+    <section class="escena3d" aria-labelledby="t-3d">
+      <div class="container">
+        <div class="section-head text-center" style="margin-bottom:0">
+          <span class="kicker">Los que más piden</span>
+          <h2 class="titulo" id="t-3d" data-split>Platos estrella</h2>
+          <p class="lead" style="margin-inline:auto">Arrastra para girar la vitrina. Pulsa un plato para verlo en la carta.</p>
+        </div>
+      </div>
+      <div class="anillo-wrap" id="anillo-wrap">
+        <div class="anillo" id="anillo" role="list" aria-label="Platos estrella"><!-- Se genera desde data.js --></div>
+        <div class="anillo-suelo"></div>
+      </div>
+      <div class="anillo-ctrl">
+        <button class="carousel__btn" type="button" id="anillo-prev" aria-label="Plato anterior" data-icon="izq"></button>
+        <button class="carousel__btn" type="button" id="anillo-next" aria-label="Plato siguiente" data-icon="der"></button>
+      </div>
+      <p class="text-center" style="margin-top:28px"><a class="btn btn--cartel btn--lg" href="carta.html">Ver la carta completa</a></p>
     </section>
 
     <!-- ============ FRESCO Y NATURAL ============ -->
@@ -149,82 +240,114 @@
       <div class="container">
         <div class="section-head reveal">
           <span class="kicker">Hecho en nuestra cocina</span>
-          <h2 class="titulo" id="t-fresco">Fresco y natural</h2>
+          <h2 class="titulo" id="t-fresco" data-split>Fresco y natural</h2>
           <p class="lead">La calidad de los ingredientes nos identifica: las mejores carnes, harina italiana para nuestras pizzas y productos frescos cada día.</p>
         </div>
         <div class="grid cards-4">
-          <article class="card reveal">
-            <div class="card__img"><img src="assets/img/platos/hamburguesas.jpg" alt="Hamburguesa natural con patatas fritas" width="670" height="420" loading="lazy"></div>
+          <article class="card reveal" data-tilt3d>
+            <div class="card__img"><img src="/assets/img/platos/hamburguesas.jpg" alt="Hamburguesa natural con patatas fritas" width="670" height="420" loading="lazy"></div>
             <div class="card__body"><h3>Hamburguesas naturales</h3><p>Preparadas y especiadas en nuestra cocina para que tengan ese sabor original que las diferencia.</p><a class="card__link" href="carta.html#hamburguesas">Ver hamburguesas →</a></div>
           </article>
-          <article class="card reveal reveal-delay-1">
-            <div class="card__img"><img src="assets/img/platos/pizzas.jpg" alt="Pizza artesana fina y crujiente" width="670" height="365" loading="lazy"></div>
+          <article class="card reveal reveal-delay-1" data-tilt3d>
+            <div class="card__img"><img src="/assets/img/platos/pizzas.jpg" alt="Pizza artesana fina y crujiente" width="670" height="365" loading="lazy"></div>
             <div class="card__body"><h3>Pizzas artesanales</h3><p>Finas y crujientes, con harina italiana. Individuales o grandes, ¡y mitad y mitad!</p><a class="card__link" href="carta.html#pizzas">Ver pizzas →</a></div>
           </article>
-          <article class="card reveal reveal-delay-2">
-            <div class="card__img"><img src="assets/img/platos/pasta.jpg" alt="Plato de pasta fresca con salsa" width="670" height="400" loading="lazy"></div>
+          <article class="card reveal reveal-delay-2" data-tilt3d>
+            <div class="card__img"><img src="/assets/img/platos/pasta.jpg" alt="Plato de pasta fresca con salsa" width="670" height="400" loading="lazy"></div>
             <div class="card__body"><h3>Pasta fresca hecha aquí</h3><p>Ningún otro sitio toledano ofrece pasta elaborada en el mismo restaurante. Al huevo y a mano.</p><a class="card__link" href="carta.html#pasta">Ver pasta →</a></div>
           </article>
-          <article class="card reveal reveal-delay-3">
-            <div class="card__img"><img src="assets/img/platos/postres.jpg" alt="Copa de helado casero con barquillos" width="450" height="486" loading="lazy"></div>
+          <article class="card reveal reveal-delay-3" data-tilt3d>
+            <div class="card__img"><img src="/assets/img/platos/postres.jpg" alt="Copa de helado casero con barquillos" width="450" height="486" loading="lazy"></div>
             <div class="card__body"><h3>Postres caseros</h3><p>Tarta de zanahoria, tarta de queso apta para celíacos, brownie, tortitas… todo hecho en casa.</p><a class="card__link" href="carta.html#postres">Ver postres →</a></div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ============ PLATOS ESTRELLA ============ -->
-    <section class="section section--crema" aria-labelledby="t-estrella">
-      <div class="container">
-        <div class="section-head text-center reveal">
-          <span class="kicker">Los que más piden</span>
-          <h2 class="titulo titulo--rosa" id="t-estrella">Platos estrella</h2>
-        </div>
-        <div class="grid cards-4 estrella" id="estrellas-app"><!-- Se rellena desde data.js --></div>
-        <p class="text-center" style="margin-top:32px"><a class="btn btn--cartel btn--lg" href="carta.html">Ver la carta completa</a></p>
+    <!-- ============ UN DÍA EN LA IGUANA (scroll horizontal) ============ -->
+    <section class="dia" id="dia" aria-label="Un día en La Iguana">
+      <div class="dia__pista" id="dia-pista">
+        <article class="dia__panel" data-color="#FFF6E2">
+          <span class="dia__icono" aria-hidden="true">☀️</span>
+          <div class="dia__grid">
+            <div>
+              <p class="dia__hora">9:30</p>
+              <h2>Buenos días, Toledo</h2>
+              <p>Café recién hecho, tostadas, tortitas caseras y el Desayuno Iguana con huevos y bacon. De lunes a viernes, desde 3 €.</p>
+              <a class="btn" href="desayunos.html">Ver desayunos</a>
+            </div>
+            <div class="dia__foto" style="--rot:-2deg"><img src="/assets/img/interior/local-ventanal.jpg" alt="Mesas junto al ventanal de La Iguana Café por la mañana" width="1200" height="540" loading="lazy"></div>
+          </div>
+        </article>
+        <article class="dia__panel dia__panel--mediodia" data-color="#FFEFC9">
+          <span class="dia__icono" aria-hidden="true">🍝</span>
+          <div class="dia__grid">
+            <div>
+              <p class="dia__hora">13:30</p>
+              <h2>Menú del día</h2>
+              <p>Cocina de mercado para los que trabajan cerca y las familias del barrio. Un principal, dos acompañamientos, pan, bebida y postre o café.</p>
+              <a class="btn" href="menu-diario.html">Menú de esta semana</a>
+            </div>
+            <div class="dia__foto"><img src="/assets/img/interior/local-mural.jpg" alt="Reservados verdes y mural de la iguana con hamburguesa" width="840" height="900" loading="lazy"></div>
+          </div>
+        </article>
+        <article class="dia__panel dia__panel--tarde" data-color="#FFDDEB">
+          <span class="dia__icono" aria-hidden="true">🎈</span>
+          <div class="dia__grid">
+            <div>
+              <p class="dia__hora">17:30</p>
+              <h2>Hora de cumples</h2>
+              <p>Meriendas a la medida de tu presupuesto para que los peques lo celebren a lo grande, con la iguana como invitada de honor.</p>
+              <a class="btn" href="celebraciones.html">Organizar un cumple</a>
+            </div>
+            <div class="dia__foto" style="--rot:-1.5deg"><img src="/assets/img/local/peques.jpg" alt="Niños sonriendo en una mesa de La Iguana Café" width="670" height="309" loading="lazy"></div>
+          </div>
+        </article>
+        <article class="dia__panel dia__panel--noche" data-color="#0d1f17">
+          <span class="dia__icono" aria-hidden="true">🌙</span>
+          <div class="dia__grid">
+            <div>
+              <p class="dia__hora">20:30</p>
+              <h2>Noches de diner</h2>
+              <p>Se enciende el neón: hamburguesas, pizzas artesanas, cócteles y buen rollo. De miércoles a domingo por la noche.</p>
+              <a class="btn" href="carta.html">Ver la carta</a>
+            </div>
+            <div class="dia__foto" style="--rot:2deg"><img src="/assets/img/interior/local-neon.jpg" alt="Rótulo de neón verde de La Iguana Café" width="1200" height="1080" loading="lazy"></div>
+          </div>
+        </article>
       </div>
+      <div class="dia__nav" aria-hidden="true"><i class="is-on"></i><i></i><i></i><i></i></div>
     </section>
 
-    <!-- ============ HAZ UN VIAJE POR LA IGUANA ============ -->
-    <section class="section section--white" aria-labelledby="t-viaje" data-viaje>
+    <!-- ============ GALERÍA REAL DEL LOCAL ============ -->
+    <section class="section section--white" id="galeria" aria-labelledby="t-galeria">
       <div class="container">
         <div class="section-head reveal" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px">
           <div>
             <span class="kicker">Visita el local</span>
-            <h2 class="titulo mt-0" id="t-viaje" style="margin-bottom:0">¡Haz un viaje por La Iguana Café!</h2>
+            <h2 class="titulo mt-0" id="t-galeria" data-split style="margin-bottom:0">¡Haz un viaje por La Iguana Café!</h2>
           </div>
-          <div class="viaje-nav">
-            <button class="carousel__btn" style="background:var(--verde-oscuro);color:#fff" type="button" data-viaje-prev aria-label="Desplazar fotos a la izquierda" data-icon="izq"></button>
-            <button class="carousel__btn" style="background:var(--verde-oscuro);color:#fff" type="button" data-viaje-next aria-label="Desplazar fotos a la derecha" data-icon="der"></button>
-          </div>
+          <a class="btn btn--outline" href="la-iguana.html#visita">Más fotos</a>
         </div>
-      </div>
-      <div class="viaje" tabindex="0" aria-label="Galería con desplazamiento horizontal">
-        <button class="viaje__item" type="button" data-lightbox="viaje" data-caption="«Vente a la iguana, guana…»"><img src="assets/img/marca/vinilo-1.jpg" alt="Vinilo de la iguana bailando: «Vente a la iguana, guana»" width="1080" height="720" loading="lazy"><span>«Vente a la iguana, guana…» 🎶</span></button>
-        <button class="viaje__item" type="button" data-lightbox="viaje" data-caption="Un sitio para toda la familia"><img src="assets/img/local/banner-9.jpg" alt="Niños sonriendo en una mesa de La Iguana Café" width="960" height="350" loading="lazy"><span>Los peques, como en casa</span></button>
-        <button class="viaje__item" type="button" data-lightbox="viaje" data-caption="«Con lo vegetariana que yo era…»"><img src="assets/img/marca/vinilo-2.jpg" alt="Vinilo de la iguana tumbada con una hamburguesa" width="1080" height="720" loading="lazy"><span>«Con lo vegetariana que yo era…»</span></button>
-        <button class="viaje__item" type="button" data-lightbox="viaje" data-caption="Nuestro cartel de neón"><img src="assets/img/local/banner-5.jpg" alt="Collage del cartel de neón y la decoración de La Iguana Café" width="960" height="350" loading="lazy"><span>Ambiente diner años 50</span></button>
-        <button class="viaje__item" type="button" data-lightbox="viaje" data-caption="«¡Hay madre, qué hinchón a pizza!»"><img src="assets/img/marca/vinilo-3.jpg" alt="Vinilo de la iguana sentada sobre cajas de pizza" width="1080" height="720" loading="lazy"><span>«¡Hay madre, qué hinchón a pizza!»</span></button>
-        <button class="viaje__item" type="button" data-lightbox="viaje" data-caption="Tarta de queso cremosa"><img src="assets/img/local/banner-7.jpg" alt="Porción de tarta de queso cremosa" width="960" height="350" loading="lazy"><span>Tarta cremosa de queso</span></button>
-        <button class="viaje__item" type="button" data-lightbox="viaje" data-caption="A 3 minutos del C.C. Luz del Tajo"><img src="assets/img/local/banner-6.jpg" alt="Mapa de situación junto al C.C. Luz del Tajo y el nuevo hospital" width="960" height="350" loading="lazy"><span>Junto al nuevo hospital</span></button>
-      </div>
-      <div class="container">
-        <!-- HUECO PARA TOUR 360: cuando haya un tour real (Google Street View / Matterport), sustituir este bloque por su <iframe> -->
-        <div class="tour360 reveal" style="margin-top:28px">
-          <div>
-            <img src="assets/img/marca/vista360.png" alt="" width="156" height="58">
-            <h3>Visita virtual 360º</h3>
-            <p>Muy pronto podrás recorrer el local desde tu móvil.</p>
-            <a class="btn btn--crema" href="la-iguana.html#visita">Ver fotos del local</a>
-          </div>
+        <!-- ⚠️ Fotos reales tomadas de reseñas públicas (Restaurant Guru / Google): sustituir por fotos propias antes de publicar -->
+        <div class="galeria-real">
+          <button class="g-item" type="button" data-lightbox="local" data-caption="Los reservados" data-speed="0.04" data-cursor="Ver"><img src="/assets/img/interior/local-pasillo.jpg" alt="Pasillo con reservados verdes y suelo de damero" width="1200" height="1140" loading="lazy"><span>Los reservados</span></button>
+          <button class="g-item" type="button" data-lightbox="local" data-caption="Nuestro neón" data-speed="-0.03" data-cursor="Ver"><img src="/assets/img/interior/local-neon.jpg" alt="Rótulo de neón verde" width="1200" height="1080" loading="lazy"><span>Nuestro neón</span></button>
+          <button class="g-item" type="button" data-lightbox="local" data-caption="«Vente a la iguana, guana…»" data-speed="0.05" data-cursor="Ver"><img src="/assets/img/marca/vinilo-1.jpg" alt="Vinilo de la iguana bailando" width="1080" height="720" loading="lazy"><span>«Vente a la iguana…» 🎶</span></button>
+          <button class="g-item" type="button" data-lightbox="local" data-caption="Rincón de fotos clásicas" data-speed="-0.02" data-cursor="Ver"><img src="/assets/img/interior/local-fotos.jpg" alt="Reservados con fotos clásicas en blanco y negro" width="930" height="900" loading="lazy"><span>Rincón clásico</span></button>
+          <button class="g-item" type="button" data-lightbox="local" data-caption="La barra" data-speed="0.03" data-cursor="Ver"><img src="/assets/img/interior/local-barra.jpg" alt="Barra de acero de La Iguana Café" width="1200" height="1080" loading="lazy"><span>La barra</span></button>
+          <button class="g-item" type="button" data-lightbox="local" data-caption="Junto al ventanal" data-speed="-0.04" data-cursor="Ver"><img src="/assets/img/interior/local-ventanal-v.jpg" alt="Mesas junto al ventanal con suelo de damero" width="860" height="898" loading="lazy"><span>Junto al ventanal</span></button>
+          <button class="g-item" type="button" data-lightbox="local" data-caption="La terraza" data-speed="0.02" data-cursor="Ver"><img src="/assets/img/interior/local-terraza.jpg" alt="Terraza exterior con césped y sillas blancas" width="980" height="900" loading="lazy"><span>La terraza</span></button>
+          <button class="g-item" type="button" data-lightbox="local" data-caption="«Con lo vegetariana que yo era…»" data-speed="-0.03" data-cursor="Ver"><img src="/assets/img/marca/vinilo-2.jpg" alt="Vinilo de la iguana con hamburguesa" width="1080" height="720" loading="lazy"><span>Nuestros vinilos</span></button>
         </div>
+        <p class="nota-fotos">Fotos del local publicadas por clientes en reseñas.</p>
       </div>
     </section>
 
     <!-- ============ HORARIO Y MAPA ============ -->
     <section class="section" aria-labelledby="t-horario">
       <div class="container horario-wrap">
-        <div class="panel panel--verde reveal">
+        <div class="panel panel--verde reveal" data-tilt3d>
           <span class="kicker">Horario y ubicación</span>
           <h2 class="titulo" id="t-horario" style="font-size:clamp(1.5rem,3.4vw,2.1rem)">Te esperamos</h2>
           <p><span class="estado" data-estado>…</span></p>
@@ -248,7 +371,7 @@
       <div class="container">
         <div class="section-head text-center reveal">
           <span class="kicker">Lo que dicen de nosotros</span>
-          <h2 class="titulo" id="t-opiniones">Clientes felices</h2>
+          <h2 class="titulo" id="t-opiniones" data-split>Clientes felices</h2>
           <!-- Dato tomado de la ficha de Google Maps en octubre de 2026: revisar antes de publicar -->
           <p class="nota-google"><span class="estrellas" aria-hidden="true">★★★★☆</span> <strong>4,4 en Google</strong> · casi 2.000 opiniones</p>
         </div>
@@ -271,12 +394,14 @@
     <!-- ============ CITA FINAL ============ -->
     <section class="cita" aria-label="Despedida">
       <blockquote class="reveal">Te esperamos todos los días de la semana</blockquote>
-      <a data-link="tel" href="tel:+34925620372" aria-label="Llamar para pedidos al 925 62 03 72"><img class="flotar" src="assets/img/marca/pedidos-neon.png" alt="Rótulo de neón: pedidos 925 62 03 72" width="330" height="102" loading="lazy"></a>
+      <a class="pedido-cta reveal" data-link="tel" href="tel:+34925620372">
+        <span class="pedido-cta__txt"><small>Reservas y pedidos para llevar</small><strong>925 62 03 72</strong></span>
+        <span class="pedido-cta__icono" data-icon="phone" aria-hidden="true"></span>
+      </a>
     </section>
   </main>
 
   <div id="site-footer"></div>
-  <script src="assets/js/data.js" defer></script>
-  <script src="assets/js/main.js" defer></script>
+  <script type="module" src="/src/js/app.js"></script>
 </body>
 </html>

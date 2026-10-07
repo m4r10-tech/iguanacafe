@@ -12,28 +12,27 @@
   <meta property="og:site_name" content="La Iguana Café">
   <meta property="og:title" content="Carta · Hamburguesas, pizzas y pasta fresca | La Iguana Café Toledo">
   <meta property="og:description" content="Consulta la carta de La Iguana Café en Toledo: hamburguesas naturales, pizzas artesanas, pasta fresca hecha aquí, ensaladas, postres caseros y cócteles. Opciones veganas y sin gluten.">
-  <meta property="og:image" content="assets/img/og-image.jpg">
+  <meta property="og:image" content="https://www.iguanacafe.es/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="assets/img/favicon.png" type="image/png">
-  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="icon" href="/assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Rock+Salt&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="/src/css/styles.css">
+  <link rel="stylesheet" href="/src/css/experiencia.css">
 </head>
 <body data-page="carta">
   <div id="site-header"></div>
   <noscript><nav class="noscript-nav"><a href="index.html">Inicio</a><a href="la-iguana.html">Quiénes somos</a><a href="carta.html">Carta</a><a href="desayunos.html">Desayunos</a><a href="menu-diario.html">Menú diario</a><a href="menu-infantil.html">Menú infantil</a><a href="celebraciones.html">Celebraciones</a><a href="contacto.html">Dónde estamos</a><a href="tel:+34925620372">Llamar 925 62 03 72</a></nav></noscript>
 
   <main id="contenido">
-    <section class="page-hero">
+    <section class="page-hero page-hero--foto" style="background-image:url('/assets/img/interior/local-barra.jpg')">
       <div class="container">
         <nav aria-label="Ruta de navegación"><ol class="breadcrumb"><li><a href="index.html">Inicio</a></li><li aria-current="page">Carta</li></ol></nav>
         <h1>Nuestra carta</h1>
         <p>Hamburguesas naturales, pizzas artesanas, pasta fresca hecha aquí y postres caseros. Busca, filtra y ¡a disfrutar!</p>
       </div>
-      <img class="page-hero__deco page-hero__deco--izq" src="assets/img/marca/hamburguesa.png" alt="" loading="lazy">
-      <img class="page-hero__deco page-hero__deco--der" src="assets/img/marca/iguana-tumbada.png" alt="" loading="lazy">
     </section>
     <div class="damero" aria-hidden="true"></div>
     <div class="carta-toolbar no-print">
@@ -63,23 +62,22 @@
       <div class="container">
         <p class="print-only"><strong>La Iguana Café</strong> · Av. Río Boladiez s/n, 45007 Toledo · Pedidos y reservas: 925 62 03 72 · www.iguanacafe.es</p>
         <div class="avisos" id="carta-avisos"></div>
-        <div id="carta-app" aria-live="polite"><!-- La carta se genera desde assets/js/data.js --></div>
+        <div id="carta-app" aria-live="polite"><!-- La carta se genera desde src/js/data.js --></div>
 
         <div class="destacado-nota reveal no-print" style="margin-top:48px">
-          <img src="assets/img/marca/take-away.png" alt="" width="92" height="326" style="width:40px">
+          <span class="destacado-nota__icono" aria-hidden="true">🛍️</span>
           <p>¿Te lo llevas a casa? Todos nuestros platos se pueden pedir para recoger. Llama al <a data-link="tel" href="tel:+34925620372"><span data-dato="telefono">925 62 03 72</span></a> y lo tendremos listo.</p>
         </div>
         <details class="no-print" style="margin-top:28px">
           <summary style="cursor:pointer;font-weight:700;color:var(--verde-oscuro)">Ver la carta impresa del local (imagen)</summary>
           <p class="nota" style="margin-top:10px">Carta de septiembre de 2026 tal y como se entrega en el restaurante.</p>
-          <button class="galeria__item" style="aspect-ratio:auto;max-width:520px" type="button" data-lightbox="carta-papel" data-caption="Carta septiembre 2026"><img src="assets/img/local/carta-septiembre-2026.jpg" alt="Carta impresa de La Iguana Café, septiembre de 2026" width="1100" height="1733" loading="lazy"></button>
+          <button class="galeria__item" style="aspect-ratio:auto;max-width:520px" type="button" data-lightbox="carta-papel" data-caption="Carta septiembre 2026"><img src="/assets/img/local/carta-septiembre-2026.jpg" alt="Carta impresa de La Iguana Café, septiembre de 2026" width="1100" height="1733" loading="lazy"></button>
         </details>
       </div>
     </section>
   </main>
 
   <div id="site-footer"></div>
-  <script src="assets/js/data.js" defer></script>
-  <script src="assets/js/main.js" defer></script>
+  <script type="module" src="/src/js/app.js"></script>
 </body>
 </html>

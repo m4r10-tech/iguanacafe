@@ -13,28 +13,27 @@
   <meta property="og:site_name" content="La Iguana Café">
   <meta property="og:title" content="Web actual vs. nueva web · Propuesta para La Iguana Café">
   <meta property="og:description" content="Comparativa entre la web actual de La Iguana Café y la nueva propuesta: móvil, carta, Google, reservas y redes sociales.">
-  <meta property="og:image" content="assets/img/og-image.jpg">
+  <meta property="og:image" content="https://www.iguanacafe.es/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="assets/img/favicon.png" type="image/png">
-  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="icon" href="/assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Rock+Salt&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="/src/css/styles.css">
+  <link rel="stylesheet" href="/src/css/experiencia.css">
 </head>
 <body data-page="comparativa">
   <div id="site-header"></div>
   <noscript><nav class="noscript-nav"><a href="index.html">Inicio</a><a href="la-iguana.html">Quiénes somos</a><a href="carta.html">Carta</a><a href="desayunos.html">Desayunos</a><a href="menu-diario.html">Menú diario</a><a href="menu-infantil.html">Menú infantil</a><a href="celebraciones.html">Celebraciones</a><a href="contacto.html">Dónde estamos</a><a href="tel:+34925620372">Llamar 925 62 03 72</a></nav></noscript>
 
   <main id="contenido">
-    <section class="page-hero">
+    <section class="page-hero page-hero--foto" style="background-image:url('/assets/img/interior/local-neon.jpg')">
       <div class="container">
         <nav aria-label="Ruta de navegación"><ol class="breadcrumb"><li><a href="index.html">Inicio</a></li><li aria-current="page">Comparativa</li></ol></nav>
         <h1>¿Por qué una web nueva?</h1>
         <p>La misma Iguana de siempre, con una web preparada para el móvil, para Google y para traer más clientes.</p>
       </div>
-      <img class="page-hero__deco page-hero__deco--izq" src="assets/img/marca/iguana-patines.png" alt="" loading="lazy">
-      <img class="page-hero__deco page-hero__deco--der" src="assets/img/marca/iguana-tumbada.png" alt="" loading="lazy">
     </section>
     <div class="damero" aria-hidden="true"></div>
     <style>
@@ -81,7 +80,7 @@
             <tr><th scope="row">Reservas y cumpleaños</th><td class="antes">No hay formularios y el icono de email no lleva a ningún sitio.</td><td class="despues">Formularios de reserva, pedido para recoger y cumpleaños, con envío por WhatsApp en un toque.</td></tr>
             <tr><th scope="row">Redes sociales</th><td class="antes">Solo Facebook y Twitter, con iconos pequeños.</td><td class="despues">Instagram, Facebook, X, WhatsApp y reseñas de Google en la cabecera, el pie y la página de contacto.</td></tr>
             <tr><th scope="row">Estadísticas</th><td class="antes">Usa Google Analytics «Universal», que dejó de registrar visitas en 2023: ahora mismo no se mide nada.</td><td class="despues">Preparada para conectar Google Analytics 4 respetando el consentimiento de cookies.</td></tr>
-            <tr><th scope="row">Seguridad y tecnología</th><td class="antes">jQuery de 2012 y un gestor de contenidos antiguo. La versión http no redirige a https.</td><td class="despues">HTML, CSS y JavaScript modernos, sin dependencias. Alojamiento gratuito con https (Netlify, Cloudflare Pages o GitHub Pages).</td></tr>
+            <tr><th scope="row">Seguridad y tecnología</th><td class="antes">jQuery de 2012 y un gestor de contenidos antiguo. La versión http no redirige a https.</td><td class="despues">Proyecto moderno con Vite (HTML, CSS y JavaScript), publicación automática y alojamiento gratuito con https (GitHub Pages, Netlify o Cloudflare Pages).</td></tr>
             <tr><th scope="row">Accesibilidad</th><td class="antes">Textos dentro de imágenes y descripciones genéricas («Iguana»).</td><td class="despues">Pensada para cumplir WCAG AA: contraste, navegación con teclado, textos alternativos y animaciones que respetan «reducir movimiento».</td></tr>
             <tr><th scope="row">Imagen de marca</th><td class="antes">Las iguanas y el neón están, pero perdidos entre bloques recargados.</td><td class="despues">Las mismas iguanas, el neón, el damero y los colores de siempre, con más protagonismo y aire.</td></tr>
           </tbody>
@@ -109,7 +108,6 @@
   </main>
 
   <div id="site-footer"></div>
-  <script src="assets/js/data.js" defer></script>
-  <script src="assets/js/main.js" defer></script>
+  <script type="module" src="/src/js/app.js"></script>
 </body>
 </html>

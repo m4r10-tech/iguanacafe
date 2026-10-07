@@ -12,32 +12,32 @@
   <meta property="og:site_name" content="La Iguana Café">
   <meta property="og:title" content="Menú del día en Toledo · La Iguana Café (junto al hospital)">
   <meta property="og:description" content="Menú diario de La Iguana Café en Toledo, laborables de 13:30 a 16:00. Elige un principal y dos acompañamientos con pan, bebida y postre o café incluidos.">
-  <meta property="og:image" content="assets/img/og-image.jpg">
+  <meta property="og:image" content="https://www.iguanacafe.es/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="assets/img/favicon.png" type="image/png">
-  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="icon" href="/assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Rock+Salt&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="/src/css/styles.css">
+  <link rel="stylesheet" href="/src/css/experiencia.css">
 </head>
 <body data-page="menu-diario">
   <div id="site-header"></div>
   <noscript><nav class="noscript-nav"><a href="index.html">Inicio</a><a href="la-iguana.html">Quiénes somos</a><a href="carta.html">Carta</a><a href="desayunos.html">Desayunos</a><a href="menu-diario.html">Menú diario</a><a href="menu-infantil.html">Menú infantil</a><a href="celebraciones.html">Celebraciones</a><a href="contacto.html">Dónde estamos</a><a href="tel:+34925620372">Llamar 925 62 03 72</a></nav></noscript>
 
   <main id="contenido">
-    <section class="page-hero">
+    <section class="page-hero page-hero--foto" style="background-image:url('/assets/img/interior/local-ventanal-v.jpg')">
       <div class="container">
         <nav aria-label="Ruta de navegación"><ol class="breadcrumb"><li><a href="index.html">Inicio</a></li><li aria-current="page">Menú diario</li></ol></nav>
         <h1>Menú diario</h1>
         <p>Los días laborables en horario de comidas, de 13:30 a 16:00 h, ofrecemos nuestro menú diario.</p>
       </div>
-      <img class="page-hero__deco page-hero__deco--izq" src="assets/img/marca/iguana-patines.png" alt="" loading="lazy">
     </section>
     <div class="damero" aria-hidden="true"></div>
     <section class="section">
       <div class="container-narrow">
-        <!-- El contenido de la pizarra se cambia cada semana en assets/js/data.js (bloque MENU_DIARIO) -->
+        <!-- El contenido de la pizarra se cambia cada semana en src/js/data.js (bloque MENU_DIARIO) -->
         <div id="menu-diario-app"></div>
         <div class="btn-group" style="justify-content:center;margin-top:32px">
           <a class="btn btn--lg" data-link="tel" href="tel:+34925620372" data-icon="phone">Reservar mesa · Llamar</a>
@@ -56,7 +56,7 @@
           <div class="redes" data-redes="red red--oscura"></div>
         </div>
         <div class="reveal reveal-delay-2">
-          <button class="galeria__item" style="aspect-ratio:auto;width:100%" type="button" data-lightbox="menu-papel" data-caption="Pizarra del menú diario de esta semana"><img src="assets/img/local/menu-diario-actual.jpg" alt="Pizarra original del menú diario de la semana" width="1400" height="995" loading="lazy"></button>
+          <button class="galeria__item" style="aspect-ratio:auto;width:100%" type="button" data-lightbox="menu-papel" data-caption="Pizarra del menú diario de esta semana"><img src="/assets/img/local/menu-diario-actual.jpg" alt="Pizarra original del menú diario de la semana" width="1400" height="995" loading="lazy"></button>
           <p class="nota text-center" style="margin-top:8px">La pizarra original de esta semana</p>
         </div>
       </div>
@@ -64,7 +64,6 @@
   </main>
 
   <div id="site-footer"></div>
-  <script src="assets/js/data.js" defer></script>
-  <script src="assets/js/main.js" defer></script>
+  <script type="module" src="/src/js/app.js"></script>
 </body>
 </html>

@@ -12,14 +12,15 @@
   <meta property="og:site_name" content="La Iguana Café">
   <meta property="og:title" content="Dónde estamos y pedidos para recoger · La Iguana Café Toledo">
   <meta property="og:description" content="La Iguana Café: Av. Río Boladiez s/n esquina C/ Río Estenilla, 45007 Toledo, junto al nuevo hospital. Pedidos para recoger y reservas en el 925 62 03 72. Horario y cómo llegar.">
-  <meta property="og:image" content="assets/img/og-image.jpg">
+  <meta property="og:image" content="https://www.iguanacafe.es/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="assets/img/favicon.png" type="image/png">
-  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="icon" href="/assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Rock+Salt&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="/src/css/styles.css">
+  <link rel="stylesheet" href="/src/css/experiencia.css">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Restaurant","name":"La Iguana Café","telephone":"+34 925 62 03 72","url":"https://www.iguanacafe.es/","priceRange":"€€","servesCuisine":["Americana","Hamburguesas","Pizza","Pasta fresca"],"address":{"@type":"PostalAddress","streetAddress":"Av. Río Boladiez s/n, esquina C/ Río Estenilla (Polígono Industrial)","addressLocality":"Toledo","postalCode":"45007","addressCountry":"ES"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:30","closes":"16:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"13:30","closes":"16:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Wednesday","Thursday"],"opens":"20:30","closes":"23:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"20:30","closes":"23:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"20:30","closes":"23:00"}],"sameAs":["https://www.facebook.com/LaIguanaCafe","https://twitter.com/iguanacafe"]}
   </script>
@@ -29,13 +30,12 @@
   <noscript><nav class="noscript-nav"><a href="index.html">Inicio</a><a href="la-iguana.html">Quiénes somos</a><a href="carta.html">Carta</a><a href="desayunos.html">Desayunos</a><a href="menu-diario.html">Menú diario</a><a href="menu-infantil.html">Menú infantil</a><a href="celebraciones.html">Celebraciones</a><a href="contacto.html">Dónde estamos</a><a href="tel:+34925620372">Llamar 925 62 03 72</a></nav></noscript>
 
   <main id="contenido">
-    <section class="page-hero">
+    <section class="page-hero page-hero--foto" style="background-image:url('/assets/img/interior/local-fachada.jpg')">
       <div class="container">
         <nav aria-label="Ruta de navegación"><ol class="breadcrumb"><li><a href="index.html">Inicio</a></li><li aria-current="page">Dónde estamos</li></ol></nav>
         <h1>Dónde estamos</h1>
         <p>Junto al nuevo hospital y a un minuto del C.C. Luz del Tajo. Reservas y pedidos para recoger por teléfono.</p>
       </div>
-      <img class="page-hero__deco page-hero__deco--der" src="assets/img/marca/take-away.png" alt="" loading="lazy">
     </section>
     <div class="damero" aria-hidden="true"></div>
     <section class="section" aria-labelledby="t-pedidos">
@@ -47,7 +47,11 @@
             <p>Llámanos, haz tu pedido y pásate a recogerlo. Así de fácil.</p>
             <a class="btn btn--lg" data-link="tel" href="tel:+34925620372" data-icon="phone" style="font-size:1.35rem">925 62 03 72</a>
           </div>
-          <img src="assets/img/marca/pedidos-neon.png" alt="Rótulo de neón: pedidos 925 62 03 72" width="330" height="102" loading="lazy" style="margin-inline:auto">
+          <div class="tel-tarjeta" aria-hidden="true">
+            <small>Pedidos y reservas</small>
+            <strong>925 62 03 72</strong>
+            <span>Llámanos y pásate a recogerlo</span>
+          </div>
         </div>
       </div>
     </section>
@@ -72,6 +76,7 @@
             <a class="btn btn--whatsapp" data-link="whatsapp" href="#" data-icon="whatsapp">WhatsApp</a>
           </div>
           <div class="redes reveal" data-redes="red red--oscura"></div>
+          <figure class="reveal" style="margin:0"><button class="g-item galeria__item" style="aspect-ratio:auto;width:100%" type="button" data-lightbox="fachada" data-caption="Así nos encuentras: toldo verde y terraza" data-cursor="Ver"><img src="/assets/img/interior/local-fachada.jpg" alt="Fachada de La Iguana Café con toldo verde y terraza" width="920" height="600" loading="lazy"></button><figcaption class="nota">Así nos encuentras: toldo verde y terraza.</figcaption></figure>
         </div>
       </div>
     </section>
@@ -82,7 +87,7 @@
           <span class="kicker">Reserva o pedido</span>
           <h2 class="titulo titulo--rosa" id="t-reserva">Reserva tu mesa</h2>
           <p class="lead">Rellena el formulario para reservar mesa o dejar listo tu pedido para recoger. Te confirmamos por teléfono.</p>
-          <button class="galeria__item" style="aspect-ratio:auto;width:100%;margin-top:18px" type="button" data-lightbox="mapa-sit" data-caption="A 3 minutos del C.C. Luz del Tajo, junto al nuevo hospital"><img src="assets/img/local/banner-6.jpg" alt="Plano de situación de La Iguana Café junto al C.C. Luz del Tajo y el nuevo hospital" width="960" height="350" loading="lazy"></button>
+          <button class="galeria__item" style="aspect-ratio:auto;width:100%;margin-top:18px" type="button" data-lightbox="mapa-sit" data-caption="A 3 minutos del C.C. Luz del Tajo, junto al nuevo hospital"><img src="/assets/img/local/banner-6.jpg" alt="Plano de situación de La Iguana Café junto al C.C. Luz del Tajo y el nuevo hospital" width="960" height="350" loading="lazy"></button>
         </div>
         <div class="panel reveal reveal-delay-2">
           <form class="form" data-demo="ok-reserva" data-titulo="Reserva / pedido para recoger" novalidate>
@@ -106,7 +111,7 @@
             <p class="form__demo">Demo: el formulario no envía datos</p>
           </form>
           <div class="form-ok" id="ok-reserva" role="status">
-            <img src="assets/img/marca/iguana-tumbada.png" alt="" width="350" height="167">
+            <img src="/assets/img/marca/iguana-tumbada.png" alt="" width="350" height="167">
             <h3>¡Gracias! Te llamaremos para confirmar</h3>
             <p>¿Tienes prisa? Envíanos los datos por WhatsApp o llámanos al <a data-link="tel" href="tel:+34925620372">925 62 03 72</a>.</p>
             <div class="btn-group" style="justify-content:center">
@@ -120,7 +125,6 @@
   </main>
 
   <div id="site-footer"></div>
-  <script src="assets/js/data.js" defer></script>
-  <script src="assets/js/main.js" defer></script>
+  <script type="module" src="/src/js/app.js"></script>
 </body>
 </html>
